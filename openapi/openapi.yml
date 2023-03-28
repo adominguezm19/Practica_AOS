@@ -1,0 +1,38 @@
+openapi: 3.0.3
+
+info:
+  version: 1.0.0
+  title: 🚗[AOS 2023] Inventario de taller de coches 🚗
+  description: >
+    ## 🚘 API REST para la gestión de inventario de taller de coches
+  license:
+    name: MIT
+    url: 'https://opensource.org/licenses/MIT'
+servers:
+  - url: http://127.0.0.1:80/api/v1
+tags:
+  - name: '⚙️Iventario'
+
+paths:
+  /inventario:
+    get:
+      summary:  Obtiene una lista de todos los artículos en el inventario
+      description: 
+
+schemas:
+  Recambio: 
+    title: '⚙️ Recambio de una artículo del taller'
+    description: >
+      Un recambio de un taller de vehículos se refiere a la sustitución de una pieza o componente
+      dañado o desgastado en un vehículo por uno nuevo o reemplazo. Los talleres de vehículos
+      ofrecen una amplia variedad de recambios para distintas marcas y modelos de vehículos,
+      desde elementos tan básicos como las bujías hasta componentes más complejos como motores y transmisiones
+    type: object
+    required: []
+
+
+    
+    
+examples:
+  recambio-example:
+     
