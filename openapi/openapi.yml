@@ -19,8 +19,9 @@ paths:
       summary:  Obtiene una lista de todos los artículos en el inventario
       description: 
 
-schemas:
-  Recambio: 
+components:
+  schemas:
+   Recambio: 
     title: '⚙️ Recambio de una artículo del taller'
     description: >
       Un recambio de un taller de vehículos se refiere a la sustitución de una pieza o componente
@@ -28,11 +29,30 @@ schemas:
       ofrecen una amplia variedad de recambios para distintas marcas y modelos de vehículos,
       desde elementos tan básicos como las bujías hasta componentes más complejos como motores y transmisiones
     type: object
-    required: []
+    properties:
+      Recambio:
+        type: object
+        required: [nombre,descripción,proveedor,equivalencias,garantía,precio,IVA,importe]
+        properties:
+          nombre:
+            $ref: '#/components/schemas/Nombre_Recambio'
+          description:
+            $ref: '#/components/schemas/Descripcion_Recambio'
+
+   Nombre_Recambio:
+     title: 'Nombre único del recambio del taller'
+     type: string
+   Descripcion_Recambio:
+     title: 'Descripcion'
+     description: >
+       Explicación detallada de las características, funciones y especificaciones
+       técnicas de una pieza o componente de repuesto para un vehículo. Esta descripción
+       es importante para asegurarse de que el recambio es adecuado para el vehículo y 
+       para comprender su función dentro del mismo.
+     type: string
 
 
     
+
     
-examples:
-  recambio-example:
-     
+    
