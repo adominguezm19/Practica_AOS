@@ -13,12 +13,6 @@ servers:
 tags:
   - name: '⚙️Iventario'
 
-paths:
-  /inventario:
-    get:
-      summary:  Obtiene una lista de todos los artículos en el inventario
-      description: 
-
 components:
   schemas:
    Recambio: 
